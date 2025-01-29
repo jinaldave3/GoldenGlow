@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsFeed</title>
+    <link rel="stylesheet" type="text/css" href="newsarticles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="../icons&images/logo.jpeg" alt="Website Icon">
+            <h2 id="toggleNavButton">Golden Glow</h2>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchArticles()">Search</button>
+        </div>
+        <div class="user-info">
+            <span id="welcomeMessage"></span>
+            <img src="../icons&images/user-icon.jpg" class="profile-icon" alt="Profile Icon">
+            <img src="../icons&images/settings.jpeg" class="settings-icon" alt="Settings Icon">
+        </div>
+    </div>
+
+    <div class="navigation">
+        <ul>
+            <p>Menu</p>
+            <li><a href="newsArticles.html">News Feed</a></li>
+            <li>Have a Question?</li>
+            <li class="indent"><a href="../communityDiscussions/communityDiscussions.html">Community Discussions</a></li>
+            <li class="indent"><a href="../menoAdvisor/menoAdvisor.html">MenoAdvisor</a></li>
+            <li><a href="#">Group Chats</a></li> <br>
+            <p>Account</p>
+            <li><a href="#">My Wellness Space</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <div class="filter-options">
+            <p>Topics
+                <button onclick="filterArticles('hot flashes')">Hot Flashes</button>
+                <button onclick="filterArticles('irritability')">Irritability</button>
+                <button onclick="filterArticles('anxiety')">Anxiety</button>
+                <button onclick="filterArticles('mood swings')">Mood Swings</button>
+            </p>
+        </div>
+        <div class="news">
+            <div class="article" id="mainArticleContainer">
+                <h2 id="mainArticleTitle"></h2>
+                <img id="mainArticleImage" src="" alt="Article Image" width="200">
+                <p id="mainArticleDescription"></p>
+            </div>
+            <div class="related-articles" 
+            id="relatedArticlesContainer">
+                <!-- Additional articles will be displayed here -->
+            </div>
+            <span id="prev" class="arrow" onclick="prevArticle()">&#10094;</span>
+            <span id="next" class="arrow" onclick="nextArticle()">&#10095;</span>
+        </div> 
+        
+        
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (!user) {
+                window.location.href = "../loginSignup/signUp.html"; // Redirect to sign-up page if not logged in
+            }
+        });
+    </script>
+    <script>
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          var userName = user.full_name || user.email; // Use display name or email
+          document.querySelector(".user-info span").textContent = `Welcome ${userName}`;
+        } else {
+           window.location.href = "../loginSignup/signUp.html";
+        }
+      });
+    </script>
+    
+    <script src="newsarticles.js"></script>
+</body>
+</html>
+
+

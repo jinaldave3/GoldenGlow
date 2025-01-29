@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenoAdvisor</title>
+    <link rel="stylesheet" type="text/css" href="gpt.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="../icons&images/logo.jpeg" alt="Website Icon">
+            <h2 id="toggleNavButton">Golden Glow</h2>
+        </div>
+
+        <div class="menoadvisor">
+            <p>Meno Advisor</p>
+        </div>
+        <div class="user-info">
+            <span>Welcome User</span>
+            <img src="../icons&images/user-icon.jpg" class="profile-icon" alt="Profile Icon">
+            <img src="../icons&images/settings.jpeg" class="settings-icon" alt="Settings Icon">
+        </div>
+    </div>
+
+    <div class="navigation">
+        <ul>
+            <p>Menu</p>
+            <li><a href="#">News Feed</a></li>
+            <li>Have a Question?</li>
+            <li class="indent"><a href="#">Community Discussions</a></li>
+            <li class="indent"><a href="#">MenoAdvisor</a></li>
+            <li><a href="#">Group Chats</a></li> <br>
+            <p>Account</p>
+            <li><a href="#">My Wellness Space</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <div class="chat-container">
+      <div class="chat-messages" id="chatMessages">
+          <!-- Chat messages will be displayed here -->
+      </div>
+      <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Type your message...">
+          <button onclick="sendMessage()">Send</button>
+      </div>
+  </div>
+
+    <script src="gpt.js"></script>
+</body>
+</html>

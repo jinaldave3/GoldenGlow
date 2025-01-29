@@ -1,0 +1,29 @@
+{
+  "name": "goldenglow",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "node gpt.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinaldave/goldenGlowConnect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinaldave/goldenGlowConnect/issues"
+  },
+  "homepage": "https://github.com/jinaldave/goldenGlowConnect#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "openai": "^4.38.0"
+  }
+}

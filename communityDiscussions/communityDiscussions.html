@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Discussions</title>
+    <link rel="stylesheet" type="text/css" href="communityDiscussions.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="../icons&images/logo.jpeg" alt="Website Icon">
+            <h2 id="toggleNavButton">Golden Glow</h2>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchArticles()">Search</button>
+        </div>
+        <div class="user-info">
+            <span>Welcome User</span>
+            <img src="../icons&images/user-icon.jpg" class="profile-icon" alt="Profile Icon">
+            <img src="../icons&images/settings.jpeg" class="settings-icon" alt="Settings Icon">
+        </div>
+    </div>
+
+    <div class="navigation">
+        <ul>
+            <p>Menu</p>
+            <li><a href="../newsfeed/newsArticles.html">News Feed</a></li>
+            <li>Have a Question?</li>
+            <li class="indent"><a href="../communityDiscussions/communityDiscussions.html">Community Discussions</a></li>
+            <li class="indent"><a href="../menoAdvisor/menoAdvisor.html">MenoAdvisor</a></li>
+            <li><a href="#">Group Chats</a></li> <br>
+            <p>Account</p>
+            <li><a href="#">My Wellness Space</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="create-post">
+            <h2>Create a New Post</h2>
+            <form id="postForm">
+                
+                <div class="post-input">
+                    <img src="../icons&images/user-icon.jpg" class="user-icon" alt="User Icon">
+                    <textarea id="postContent" name="postContent" rows="2" cols="73" required placeholder="What's on your mind..."></textarea><br>
+                </div>
+                
+                <div class="post-options">
+                    <button type="button" onclick="addImage()">Add Image</button>
+                    <button type="button" onclick="boldText()">Bold</button>
+                    <button type="button" onclick="italicText()">Italic</button>
+                    <button type="button" onclick="underlineText()">Underline</button>
+                    <button type="button" onclick="createPost()">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="posts">
+            <!-- Posts will be displayed here -->
+        </div>
+        
+        
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (!user) {
+                window.location.href = "../loginSignup/signUp.html"; // Redirect to sign-up page if not logged in
+            }
+        });
+    </script>
+    <script src="communityDiscussions.js"></script>
+</body>
+</html>

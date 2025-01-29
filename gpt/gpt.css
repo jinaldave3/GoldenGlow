@@ -1,0 +1,183 @@
+/* Existing CSS styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  color: #EB316D;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.logo h2 {
+  margin: 0;
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: 220px;
+  background-color: #ffffff;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 60px;
+  flex-direction: column;
+  color: #AEAEB1;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.navigation li {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #AEAEB1;
+  font-size: 18px;
+}
+
+.navigation a:hover {
+  color: #EB316D;
+}
+
+.menoadvisor {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-left: 470px;
+  font: 400px;
+  text-shadow: 0 0 4px 0;
+}
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  margin-right: 7px;
+}
+
+.profile-icon {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.settings-icon {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navigation ul li.indent {
+  margin-left: 20px; 
+}
+
+
+.chat-container {
+  position: fixed;
+  top: 60px; /* Adjust this value to match the height of your header */
+  left: 220px; /* Adjust this value to match the width of your navigation */
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-left: 1px solid #ccc; /* Add a border to separate from navigation */
+  border-top: 1px solid #ccc; /* Add a border to separate from header */
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+.chat-header {
+  background-color: #EB316D;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-messages {
+  height: calc(100% - 40px); /* Adjust this value to account for header and input height */
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-input {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ccc; /* Add a border to separate from messages */
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.chat-input button {
+  padding: 8px 15px;
+  background-color: #EB316D;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #D1225B;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.user {
+  background-color: #EB316D;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.bot {
+  background-color: #ccc;
+  color: #000;
+  align-self: flex-start;
+}
